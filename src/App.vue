@@ -1,5 +1,5 @@
 <template>
-  <div id="app" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <div id="app" data-offset="100">
     <Header/>
     <Banner/>
     <Content/>
@@ -22,14 +22,14 @@ export default {
     Footer
   },
     data () {
-    return {
-      info: null
-    }
+      return {
+        info: null
+      }
   },
   mounted () {
     fetch('http://jsuol.com.br/p/pp/teste-front/data.json')
-  .then(response => response.json() )
-  .then(data => {
+    .then(response => response.json() )
+    .then(data => {
       this.info = data
     })
   }
