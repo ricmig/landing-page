@@ -1,8 +1,8 @@
 <template>
-  <div id="app" data-offset="100">
+  <div id="app">
     <Header/>
     <Banner/>
-    <Content/>
+    <Content :contentInfo="contentInfo"/>
     <Footer/>    
   </div>
 </template>
@@ -23,14 +23,14 @@ export default {
   },
     data () {
       return {
-        info: null
+        contentInfo: null
       }
   },
   mounted () {
     fetch('http://jsuol.com.br/p/pp/teste-front/data.json')
     .then(response => response.json() )
     .then(data => {
-      this.info = data
+      this.contentInfo = data
     })
   }
 }
