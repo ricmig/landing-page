@@ -1,7 +1,5 @@
 # project-uol
 
-> teste para a vaga de front-end
-
 ## Build Setup
 
 ``` bash
